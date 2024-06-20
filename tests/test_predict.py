@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..','app')))
 
 #__file__ est une variable spéciale en Python qui contient le chemin du fichier script actuel.
 #os.path.dirname(__file__) renvoie le répertoire contenant ce fichier script. Autrement dit, cela donne le chemin du répertoire où se trouve le fichier en cours d'exécution.
