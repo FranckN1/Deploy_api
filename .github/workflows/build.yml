@@ -25,4 +25,4 @@ jobs:
       - name: Exécution des tests avec pytest
         run: |
           . venv/bin/activate
-          pytest test_predict.py
+          pytest tests/
