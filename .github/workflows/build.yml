@@ -1,0 +1,25 @@
+name: Deploy_api
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code 
+        uses: actions/checkout@v2
+
+      - name: Configurer python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+        
+      - name: Installer les dépendances Python
+        run: |
+          python -m pip install --upgrade pip
+          pip install -t requirements.txt
+
+      - name: Exécution des tests avec pytest
+        run: |
+          pytest test_predict
