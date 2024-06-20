@@ -17,9 +17,12 @@ jobs:
         
       - name: Installer les dépendances Python
         run: |
+          python -m venv venv
+          . venv/bin/activate
           python -m pip install --upgrade pip
-          pip install -t requirements.txt
+          pip install -r requirements.txt
 
       - name: Exécution des tests avec pytest
         run: |
-          pytest test_predict
+          . venv/bin/activate
+          pytest tests/
